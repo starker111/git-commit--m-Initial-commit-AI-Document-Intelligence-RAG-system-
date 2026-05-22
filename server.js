@@ -68,7 +68,7 @@ app.post("/api/ingest", upload.single("file"), async (req, res) => {
       headers: form.getHeaders(),
       maxBodyLength: Infinity,
       maxContentLength: Infinity,
-      timeout: 300000
+      timeout: 600000
     });
 
     res.json(response.data);
@@ -99,7 +99,7 @@ app.post("/api/ask", async (req, res) => {
         headers: {
           "Content-Type": "application/json"
         },
-        timeout: 300000
+        timeout: 600000
       }
     );
 
